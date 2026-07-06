@@ -1,0 +1,20 @@
+<div class="shopping-app">
+  <h1>Input Signals Demo</h1>
+
+  <div class="demo-section">
+    <h2>Signals Inputs (Parent -> child)</h2>
+    <p>Data flows down from parent to child via signal inputs:</p>
+
+    <app-product-card 
+    [name]="productName()"
+    [price]="productPrice()"
+    [available]="productAvailable()" />
+
+    <div class="controls">
+      <button (click)="updateProduct()">Update Product Data</button>
+      <button (click)="toggleAvailability()">Toggle Availability</button>
+    </div>
+
+  </div>
+
+</div>
